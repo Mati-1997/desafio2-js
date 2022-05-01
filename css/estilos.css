@@ -1,0 +1,12 @@
+h1,
+h2 {
+  font-style: italic;
+}
+
+body {
+  background-image: url("../img/background2.jpg");
+}
+
+h2 {
+  color: white;
+}
