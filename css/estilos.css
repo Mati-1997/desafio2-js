@@ -1,12 +1,13 @@
 h1,
-h2 {
+h2,
+h3 {
   font-style: italic;
 }
 
-body {
-  background-image: url("../img/background2.jpg");
+mark {
+  background-color: yellow;
 }
 
-h2 {
-  color: white;
+div {
+  align-items: center center;
 }

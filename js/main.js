@@ -122,6 +122,12 @@ console.log(
     producto4.precio * compraProducto4
 );
 
+let subtotal1 = compraProducto1 * producto1.precio;
+let subtotal2 = compraProducto2 * producto2.precio;
+let subtotal3 = compraProducto3 * producto3.precio;
+let subtotal4 = compraProducto4 * producto4.precio;
+let subtotal = subtotal1 + subtotal2 + subtotal3 + subtotal4;
+
 let envio = prompt(
   "Selecciona metodo de envio" +
     " 1-Motomensajeria CABA $500" +
@@ -129,24 +135,95 @@ let envio = prompt(
     " 3-Correo $650 " +
     " 4-Expreso $4000"
 );
+let precioEnvio = 0;
 switch (envio) {
   case "1":
     console.log("El costo de envio es de 500");
+    if ((envio = 1)) {
+      precioEnvio = precioEnvio + 500;
+    }
     break;
 
   case "2":
     console.log("El costo de envio es de 2000");
+    if ((envio = 2)) {
+      precioEnvio = precioEnvio + 2000;
+    }
     break;
 
   case "3":
     console.log("El costo de envio es de 650");
+    if ((envio = 3)) {
+      precioEnvio = precioEnvio + 650;
+    }
     break;
 
   case "4":
     console.log("El costo de envio es de 4000");
+    if ((envio = 4)) {
+      precioEnvio = precioEnvio + 4000;
+    }
     break;
 
   default:
     alert("Valor no valido");
     break;
 }
+
+let total = parseInt(subtotal + precioEnvio);
+console.log("El total es de " + total);
+
+alert("El monto a abonar es " + total);
+
+function destinatario(
+  identificador,
+  nombre,
+  calle,
+  localidad,
+  provincia,
+  celular,
+  cp
+) {
+  this.identificador = identificador;
+  this.nombre = nombre;
+  this.calle = calle;
+  this.localidad = localidad;
+  this.provincia = provincia;
+  this.celular = celular;
+  this.cp = cp;
+}
+
+const destinatario1 = new destinatario(
+  "Destinatario",
+  prompt("Por favor ingresa el nombre de la persona que recibe el pedido"),
+  prompt("Por favor ingresa el domicilio"),
+  prompt("Por favor ingresa la localidad"),
+  prompt("Por favor ingresa la provincia"),
+  prompt("Por favor ingresa un numero de contacto"),
+  prompt("Por favor ingresa el codigo postal")
+);
+
+console.log(destinatario1);
+
+function tarjeta(identificador, numero, vencimiento, nombre, codigo, dni) {
+  this.identificador = identificador;
+  this.numero = numero;
+  this.vencimiento = vencimiento;
+  this.nombre = nombre;
+  this.codigo = codigo;
+  this.dni = dni;
+}
+
+const tarjeta1 = new tarjeta(
+  "Tarjeta",
+  prompt("Por favor ingresa los 16 digitos de tu tarjeta"),
+  prompt("Por favor ingresa la fecha de vencimiento de tu tarjeta"),
+  prompt("Por favor ingresa tu nombre completo como figuta en tu tarjeta"),
+  prompt("Por favor ingresa el codigo de seguridad de tu tarjeta"),
+  prompt("Por favor ingresa tu dni")
+);
+
+console.log(tarjeta1);
+console.log("Tu pago fue realizado correctamente.");
+console.log("En las proximas 24 horas estaremos despachando tu pedido.");
+console.log("Muchas gracias por tu compra!");
