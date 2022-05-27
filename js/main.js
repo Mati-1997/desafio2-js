@@ -1,4 +1,4 @@
-alert = "Presiona f12 para abrir la consola y ver los resultados";
+alert("Presiona f12 para abrir la consola y ver los resultados");
 let nombre = prompt("Hola! Ingresa tu nombre");
 console.log("Bienvenido " + nombre + " a Ray Ban Argentina.");
 
